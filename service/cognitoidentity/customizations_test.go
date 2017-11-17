@@ -3,9 +3,9 @@ package cognitoidentity_test
 import (
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/service/cognitoidentity"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/awstesting/unit"
+	"github.com/maccam912/aws-sdk-go/service/cognitoidentity"
 )
 
 var svc = cognitoidentity.New(unit.Session)

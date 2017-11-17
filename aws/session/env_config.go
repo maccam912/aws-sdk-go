@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/maccam912/aws-sdk-go/aws/credentials"
 )
 
 // EnvProviderName provides a name of the provider when config is loaded from environment.

@@ -9,9 +9,9 @@
 package pricingiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/pricing"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/service/pricing"
 )
 
 // PricingAPI provides an interface to enable mocking the

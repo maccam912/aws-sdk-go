@@ -14,15 +14,15 @@ import (
 	"os"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/corehandlers"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds"
-	"github.com/aws/aws-sdk-go/aws/credentials/endpointcreds"
-	"github.com/aws/aws-sdk-go/aws/ec2metadata"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/awserr"
+	"github.com/maccam912/aws-sdk-go/aws/corehandlers"
+	"github.com/maccam912/aws-sdk-go/aws/credentials"
+	"github.com/maccam912/aws-sdk-go/aws/credentials/ec2rolecreds"
+	"github.com/maccam912/aws-sdk-go/aws/credentials/endpointcreds"
+	"github.com/maccam912/aws-sdk-go/aws/ec2metadata"
+	"github.com/maccam912/aws-sdk-go/aws/endpoints"
+	"github.com/maccam912/aws-sdk-go/aws/request"
 )
 
 // A Defaults provides a collection of default values for SDK clients.

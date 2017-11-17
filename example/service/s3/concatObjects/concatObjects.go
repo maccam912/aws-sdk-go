@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/session"
+	"github.com/maccam912/aws-sdk-go/service/s3"
 )
 
 type client struct {

@@ -13,12 +13,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/endpoints"
+	"github.com/maccam912/aws-sdk-go/aws/session"
+	"github.com/maccam912/aws-sdk-go/service/s3"
+	"github.com/maccam912/aws-sdk-go/service/s3/s3iface"
+	"github.com/maccam912/aws-sdk-go/service/s3/s3manager"
 )
 
 // server.go is an example of a service that vends lists for requests for presigned

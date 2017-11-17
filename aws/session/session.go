@@ -9,15 +9,15 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/corehandlers"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
-	"github.com/aws/aws-sdk-go/aws/defaults"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/awserr"
+	"github.com/maccam912/aws-sdk-go/aws/client"
+	"github.com/maccam912/aws-sdk-go/aws/corehandlers"
+	"github.com/maccam912/aws-sdk-go/aws/credentials"
+	"github.com/maccam912/aws-sdk-go/aws/credentials/stscreds"
+	"github.com/maccam912/aws-sdk-go/aws/defaults"
+	"github.com/maccam912/aws-sdk-go/aws/endpoints"
+	"github.com/maccam912/aws-sdk-go/aws/request"
 )
 
 // A Session provides a central location to create service clients from and

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/maccam912/aws-sdk-go/private/util"
 )
 
 // ZeroReader is a io.Reader which will always write zeros to the byte slice provided.

@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/awstesting"
+	"github.com/maccam912/aws-sdk-go/awstesting"
 )
 
 func TestReadCloserClose(t *testing.T) {

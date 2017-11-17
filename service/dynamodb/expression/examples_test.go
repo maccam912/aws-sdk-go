@@ -3,11 +3,11 @@ package expression_test
 import (
 	"fmt"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/awserr"
+	"github.com/maccam912/aws-sdk-go/aws/session"
+	"github.com/maccam912/aws-sdk-go/service/dynamodb"
+	"github.com/maccam912/aws-sdk-go/service/dynamodb/expression"
 )
 
 // Using Projection Expression

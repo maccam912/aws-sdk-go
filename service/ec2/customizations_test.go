@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/service/ec2"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/awstesting/unit"
+	"github.com/maccam912/aws-sdk-go/service/ec2"
 )
 
 func TestCopySnapshotPresignedURL(t *testing.T) {

@@ -4,8 +4,8 @@
 package storagegateway
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/storagegateway"
+	"github.com/maccam912/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/maccam912/aws-sdk-go/service/storagegateway"
 	"github.com/gucumber/gucumber"
 )
 

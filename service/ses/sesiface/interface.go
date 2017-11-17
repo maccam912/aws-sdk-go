@@ -9,9 +9,9 @@
 package sesiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/ses"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/service/ses"
 )
 
 // SESAPI provides an interface to enable mocking the

@@ -5,10 +5,10 @@ package dynamodbstreams
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/awsutil"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/service/dynamodb"
 )
 
 const opDescribeStream = "DescribeStream"

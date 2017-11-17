@@ -1,8 +1,8 @@
 package polly
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol/rest"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/private/protocol/rest"
 )
 
 func init() {

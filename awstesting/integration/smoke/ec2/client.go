@@ -4,8 +4,8 @@
 package ec2
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/ec2"
+	"github.com/maccam912/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/maccam912/aws-sdk-go/service/ec2"
 	"github.com/gucumber/gucumber"
 )
 

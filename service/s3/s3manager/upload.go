@@ -8,13 +8,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3iface"
+	pb "gopkg.in/cheggaaa/pb.v1"
+
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/awserr"
+	"github.com/maccam912/aws-sdk-go/aws/awsutil"
+	"github.com/maccam912/aws-sdk-go/aws/client"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/service/s3"
+	"github.com/maccam912/aws-sdk-go/service/s3/s3iface"
 )
 
 // MaxUploadParts is the maximum allowed number of parts in a multi-part upload
@@ -616,9 +618,10 @@ func (u *multiuploader) upload(firstBuf io.ReadSeeker) (*UploadOutput, error) {
 
 	// Create the workers
 	ch := make(chan chunk, u.cfg.Concurrency)
+	completed := make(chan int, u.cfg.Concurrency)
 	for i := 0; i < u.cfg.Concurrency; i++ {
 		u.wg.Add(1)
-		go u.readChunk(ch)
+		go u.readChunk(ch, completed)
 	}
 
 	// Send part 1 to the workers
@@ -664,8 +667,14 @@ func (u *multiuploader) upload(firstBuf io.ReadSeeker) (*UploadOutput, error) {
 		ch <- chunk{buf: reader, num: num}
 	}
 
-	// Close the channel, wait for workers, and complete upload
 	close(ch)
+	bar := pb.StartNew(int(u.totalSize)).SetUnits(pb.U_BYTES)
+	for i := num; i > 0; i-- {
+		bar.Add(<-completed)
+	}
+	bar.Finish()
+	// Close the channel, wait for workers, and complete upload
+	close(completed)
 	u.wg.Wait()
 	complete := u.complete()
 
@@ -687,7 +696,7 @@ func (u *multiuploader) upload(firstBuf io.ReadSeeker) (*UploadOutput, error) {
 
 // readChunk runs in worker goroutines to pull chunks off of the ch channel
 // and send() them as UploadPart requests.
-func (u *multiuploader) readChunk(ch chan chunk) {
+func (u *multiuploader) readChunk(ch chan chunk, completed chan int) {
 	defer u.wg.Done()
 	for {
 		data, ok := <-ch
@@ -700,6 +709,7 @@ func (u *multiuploader) readChunk(ch chan chunk) {
 			if err := u.send(data); err != nil {
 				u.seterr(err)
 			}
+			completed <- int(u.cfg.PartSize)
 		}
 	}
 }

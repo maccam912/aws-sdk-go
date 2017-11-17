@@ -5,8 +5,8 @@ package elb
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/request"
 )
 
 // WaitUntilAnyInstanceInService uses the Elastic Load Balancing API operation

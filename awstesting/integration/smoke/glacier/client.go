@@ -4,8 +4,8 @@
 package glacier
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/glacier"
+	"github.com/maccam912/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/maccam912/aws-sdk-go/service/glacier"
 	"github.com/gucumber/gucumber"
 )
 

@@ -3,12 +3,12 @@
 package greengrass
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/signer/v4"
-	"github.com/aws/aws-sdk-go/private/protocol/restjson"
+	"github.com/maccam912/aws-sdk-go/aws"
+	"github.com/maccam912/aws-sdk-go/aws/client"
+	"github.com/maccam912/aws-sdk-go/aws/client/metadata"
+	"github.com/maccam912/aws-sdk-go/aws/request"
+	"github.com/maccam912/aws-sdk-go/aws/signer/v4"
+	"github.com/maccam912/aws-sdk-go/private/protocol/restjson"
 )
 
 // Greengrass provides the API operation methods for making requests to

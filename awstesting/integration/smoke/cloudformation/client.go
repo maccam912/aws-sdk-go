@@ -4,8 +4,8 @@
 package cloudformation
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/cloudformation"
+	"github.com/maccam912/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/maccam912/aws-sdk-go/service/cloudformation"
 	"github.com/gucumber/gucumber"
 )
 

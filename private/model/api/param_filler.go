@@ -3,12 +3,12 @@
 package api
 
 import (
-	"fmt"
 	"encoding/json"
+	"fmt"
 	"reflect"
 	"strings"
 
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/maccam912/aws-sdk-go/private/util"
 )
 
 // A paramFiller provides string formatting for a shape and its types.
@@ -83,7 +83,7 @@ func (f paramFiller) paramsStructAny(value interface{}, shape *Shape) string {
 	case "jsonvalue":
 		v, err := json.Marshal(value)
 		if err != nil {
-			panic("failed to marshal JSONValue, "+err.Error())
+			panic("failed to marshal JSONValue, " + err.Error())
 		}
 		const tmpl = `func() aws.JSONValue {
 			var m aws.JSONValue
